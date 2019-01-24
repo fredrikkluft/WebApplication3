@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-charts',
-  templateUrl: './charts.component.html',
-  styleUrls: ['./charts.component.css']
+  selector: 'app-power-component',
+  templateUrl: './power.component.html',
+  styleUrls: ['./power.component.css']
 })
-export class ChartsComponent implements OnInit {
+export class PowerComponent implements OnInit {
   showDashboard: boolean;
   showProject: boolean;
 
