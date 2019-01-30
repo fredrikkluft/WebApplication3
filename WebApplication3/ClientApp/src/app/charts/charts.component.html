@@ -8,54 +8,164 @@
 <body>
   <!-- all websites HTML here -->
   <div class="container" *ngIf="showDashboard">
-    <h3>Dashboard</h3>
-    <button type="button" class="btn btn-primary" style="padding:100px" (click)="toProject()">Project 1</button>
-    <button type="button" class="btn btn-info" style="padding:100px" (click)="toProject()">Project 2</button>
-    <button type="button" class="btn btn-success" style="padding:100px" (click)="toProject()">Project 3</button>
+    <h3>Project</h3>
+    <select class="form-control dropdown" style="text-align-last:center; width:auto">
+      <option disabled selected value="">--- Select ---</option>
+      <option value="X-12556 Fraud Monitoring">X-12556 Fraud Monitoring</option>
+      <option value="X-99332 Bachelor Thesis">X-99332 Bachelor Thesis</option>
+      <option value="X-32323 Reporting Dashboard">X-32323 Reporting Dashboard</option>
+    </select>
+    <button class="btn" style="margin-top:10px" (click)="toProject()">Get</button>
+
+    <h3>Reports</h3>
+    <select class="form-control dropdown" style="text-align-last:center; min-width:100px; width:auto">
+      <option disabled selected value="">--- Select ---</option>
+      <option value="January 2019">January 2019 (ongoing)</option>
+      <option value="December 2018">December 2018</option>
+      <option value="November 2018">November 2018</option>
+    </select>
+    <button class="btn" style="margin-top:10px" (click)="toReport()">Get</button>
+    <button class="btn" style="margin-top:10px">Create</button>
   </div>
 
   <div class="container" *ngIf="showProject">
-    <h3>Project</h3>
     <div class="row">
-      <div class="column">
-        <div class="resp-container">
-          <iframe class="resp-iframe" src="https://canvasjs.com/wp-content/uploads/images/gallery/jsp-charts/overview/jsp-charts-graphs-json-data-using-ajax.png" frameborder="0" allowFullScreen="true"></iframe>
-        </div>
+      <div class="cloumn" style="float:left">
+        <h5><b>Project ID:</b> X-12345</h5>
+        <h5><b>Cross country Project IDs:</b> X-12345, X-54321</h5>
+        <h5><b>Project Executive:</b> Ola Normann</h5>
+        <h5><b>Project Manager:</b> Kari Normann</h5>
+        <h5><b>Protifolio Stage:</b> Ongoing</h5>
       </div>
 
       <div class="column">
-        <textarea class="form-control" style="max-width:80%; margin-bottom:7px" rows="10" placeholder="Write something here..."></textarea>
-        <button class="btn btn-success" (click)="submit()">Submit</button>
+          <img src="https://sptwentyten.files.wordpress.com/2010/08/traffic_light_green_dan__01.png?fbclid=IwAR2ETxoekYw7Dqyrv4R6eh09PWGkKUse5aDDUDtgvPKBH1wvlvWueq7Pbzs" style="height:10%; width:10%; margin-left:20px" />
       </div>
     </div>
 
-    <div class="row">
+    <div class="row" style="margin-top:75px">
       <div class="column">
-        <div class="resp-container">
-          <iframe class="resp-iframe" src="https://canvasjs.com/wp-content/uploads/images/gallery/jsp-charts/overview/jsp-charts-graphs-json-data-using-ajax.png" frameborder="0" allowFullScreen="true"></iframe>
-        </div>
+          <img src="http://www.habilelabs.io/wp-content/uploads/2016/07/chart11.png?fbclid=IwAR0PJMfEAUW5yBgI6ufHj4Cuf8iq7hNCXlymABT3w8nY1uWYhcxJ3H2qhn0" style="height:50%; width:50%" />
       </div>
 
       <div class="column">
-        <textarea class="form-control" style="max-width:80%; margin-bottom:7px" rows="10" placeholder="Write something here..."></textarea>
-        <button class="btn btn-success" (click)="submit()">Submit</button>
+        <textarea class="form-control" style="max-width:80%; margin-bottom:7px" rows="6" placeholder="Write something here..."></textarea>
+        <button class="btn" style="background-color:#ED8B00; margin-top:10px" (click)="submit()">Submit</button>
       </div>
     </div>
 
-    <div class="row">
+    <div class="row" style="margin-top:75px">
       <div class="column">
-        <div class="resp-container">
-          <iframe class="resp-iframe" src="https://canvasjs.com/wp-content/uploads/images/gallery/jsp-charts/overview/jsp-charts-graphs-json-data-using-ajax.png" frameborder="0" allowFullScreen="true"></iframe>
-        </div>
+          <img src="https://d33wubrfki0l68.cloudfront.net/cc541f9cbdd7e0c8f14c2fde762ff38c00e9d62b/fc921/images/angular/ng2-charts/chart-example.png?fbclid=IwAR1CGZibBy3M1woRhPYZkj_UuswC7_THn94CZ0tN-ZrPIssaPbc-lxFpCg0" style="height:65%; width:65%" />
       </div>
 
       <div class="column">
-        <textarea class="form-control" style="max-width:80%; margin-bottom:7px" rows="10" placeholder="Write something here..."></textarea>
-        <button class="btn btn-success" (click)="submit()">Submit</button>
+        <textarea class="form-control" style="max-width:80%; margin-bottom:7px" rows="6" placeholder="Write something here..."></textarea>
+        <button class="btn" style="background-color:#ED8B00" (click)="submit()">Submit</button>
       </div>
     </div>
 
-    <button class="btn btn-info" (click)="backToDashboard()">Back to Dashboard</button>
+    <button class="btn" style="background-color:#00BEF0" (click)="backToDashboard()">Back to Frontpage</button>
+  </div>
+
+  <div class="container" *ngIf="showReport">
+    <div class="row">
+      <div class="column">
+        <img src="https://sptwentyten.files.wordpress.com/2010/08/traffic_light_green_dan__01.png?fbclid=IwAR2ETxoekYw7Dqyrv4R6eh09PWGkKUse5aDDUDtgvPKBH1wvlvWueq7Pbzs" style="height:25%; width:25%; text-align:center" />
+      </div>
+    </div>
+    <div class="row" style="margin-top:75px">
+      <div class="column">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+          <label class="form-check-label" for="defaultCheck1">
+            January
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
+          <label class="form-check-label" for="defaultCheck2">
+            February
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="defaultCheck3">
+          <label class="form-check-label" for="defaultCheck3">
+            March
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="defaultCheck4">
+          <label class="form-check-label" for="defaultCheck4">
+            April
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="defaultCheck5">
+          <label class="form-check-label" for="defaultCheck5">
+            May
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="defaultCheck6">
+          <label class="form-check-label" for="defaultCheck6">
+            June
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="defaultCheck7">
+          <label class="form-check-label" for="defaultCheck7">
+            July
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="defaultCheck8">
+          <label class="form-check-label" for="defaultCheck8">
+            August
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="defaultCheck9">
+          <label class="form-check-label" for="defaultCheck9">
+            September
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="defaultCheck10">
+          <label class="form-check-label" for="defaultCheck10">
+            October
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="defaultCheck11">
+          <label class="form-check-label" for="defaultCheck11">
+            November
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="defaultCheck12">
+          <label class="form-check-label" for="defaultCheck12">
+            December
+          </label>
+        </div>
+      </div>
+      <div class="column">
+        <div>
+          <img src="https://d33wubrfki0l68.cloudfront.net/cc541f9cbdd7e0c8f14c2fde762ff38c00e9d62b/fc921/images/angular/ng2-charts/chart-example.png?fbclid=IwAR1CGZibBy3M1woRhPYZkj_UuswC7_THn94CZ0tN-ZrPIssaPbc-lxFpCg0" style="height:100%; width:100%" />
+        </div>
+      </div>
+    </div>
+
+    <div class="row" style="margin-top:50px">
+      <p>
+        Lorem ipsum dolor sit amet, facete omnesque nec ne. Ut pro eirmod petentium efficiantur. Mei putent everti mnesarchum id, in usu legendos inimicus assueverit, vel at modo alterum detraxit. Sonet eruditi cum ne, te suas vidisse quo, eum cu ludus eirmod imperdiet.
+      </p>
+      <p>
+        His an nominati tractatos. Et feugiat sapientem repudiare eum, vis alii audiam inermis te. Ut sed autem saepe, usu quaeque eloquentiam id. Id eos discere deseruisse interpretaris, mea inani accusamus ne, pro eu equidem delectus. Esse eripuit accusata sit an, ut nam perpetua dignissim.
+      </p>
+    </div>
+
+    <button class="btn" style="background-color:#00BEF0; margin:10px" (click)="backToDashboard()">Back to Frontpage</button>
   </div>
 </body>
 </html>

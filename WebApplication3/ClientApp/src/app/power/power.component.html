@@ -8,14 +8,31 @@
 <body>
   <!-- all websites HTML here -->
   <div class="container" *ngIf="showDashboard">
-    <h3>Dashboard</h3>
-    <button type="button" class="btn btn-primary" style="padding:100px" (click)="toProject()">Project 1</button>
-    <button type="button" class="btn btn-info" style="padding:100px" (click)="toProject()">Project 2</button>
-    <button type="button" class="btn btn-success" style="padding:100px" (click)="toProject()">Project 3</button>
+    <h3>Project</h3>
+    <select class="form-control dropdown" style="text-align-last:center; width:auto">
+      <option disabled selected value="">--- Select ---</option>
+      <option value="X-12556 Fraud Monitoring">X-12556 Fraud Monitoring</option>
+      <option value="X-99332 Bachelor Thesis">X-99332 Bachelor Thesis</option>
+      <option value="X-32323 Reporting Dashboard">X-32323 Reporting Dashboard</option>
+    </select>
+    <button class="btn" style="margin-top:10px" (click)="toProject()">Get</button>
+
+    <h3>Reports</h3>
+    <select class="form-control dropdown" style="text-align-last:center; min-width:100px; width:auto">
+      <option disabled selected value="">--- Select ---</option>
+      <option value="January 2019">January 2019 (ongoing)</option>
+      <option value="December 2018">December 2018</option>
+      <option value="November 2018">November 2018</option>
+    </select>
+    <button class="btn" style="margin-top:10px" (click)="toProject()">Get</button>
+    <button class="btn" style="margin-top:10px">Create</button>
   </div>
 
   <div class="container" *ngIf="showProject">
     <h3>Project</h3>
+
+    <button class="btn" style="background-color:#00BEF0" (click)="backToDashboard()">Back to Frontpage</button>
+
     <div class="row">
       <div class="column">
         <div class="resp-container">
@@ -25,7 +42,7 @@
 
       <div class="column">
         <textarea class="form-control" style="max-width:80%; margin-bottom:7px" rows="10" placeholder="Write something here..."></textarea>
-        <button class="btn btn-success" (click)="submit()">Submit</button>
+        <button class="btn" style="background-color:#ED8B00" (click)="submit()">Submit</button>
       </div>
     </div>
 
@@ -38,7 +55,7 @@
 
       <div class="column">
         <textarea class="form-control" style="max-width:80%; margin-bottom:7px" rows="10" placeholder="Write something here..."></textarea>
-        <button class="btn btn-success" (click)="submit()">Submit</button>
+        <button class="btn" style="background-color:#ED8B00" (click)="submit()">Submit</button>
       </div>
     </div>
 
@@ -51,11 +68,9 @@
 
       <div class="column">
         <textarea class="form-control" style="max-width:80%; margin-bottom:7px" rows="10" placeholder="Write something here..."></textarea>
-        <button class="btn btn-success" (click)="submit()">Submit</button>
+        <button class="btn" style="background-color:#ED8B00" (click)="submit()">Submit</button>
       </div>
     </div>
-
-    <button class="btn btn-info" (click)="backToDashboard()">Back to Dashboard</button>
   </div>
 </body>
 </html>
